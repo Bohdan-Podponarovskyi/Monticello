@@ -1,0 +1,17 @@
+.title {
+  font-family: $primary-title;
+  color: $color-blue;
+  text-transform: uppercase;
+
+  &--primary {
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 5.4rem;
+  }
+
+  &--secondary {
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+  }
+}

@@ -1,0 +1,41 @@
+@import "./reset";
+@import "./fonts";
+@import "./variables";
+@import "./typo";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $primary-text;
+  font-size: $default-font-size;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-black-default;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $max-content-width;
+}
+
+.text-wrapper {
+
+  &--right {
+    margin-left: 60px;
+  }
+
+  &--left {
+    margin-right: 60px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
