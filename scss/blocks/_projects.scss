@@ -2,16 +2,7 @@
 
     &__title {
       text-align: center;
-      margin: 10rem 0 15rem;
-
-      &:before {
-          content: "";
-          display: block;
-          width: 100%;
-          max-width: 100px;
-          border-bottom: 1px solid #2C4058;
-          margin: 30px auto;
-      }
+      margin-bottom: 15rem;
     }
 
     &__project {
@@ -71,14 +62,14 @@
         &--left {
           &:before {
             left: -215px;
-            background-color: #55B7FF;
+            background-color: $color-blue-light;
           }
         }
 
         &--right {
           &:before {
             right: -215px;
-            background-color: #7E5AFF;
+            background-color: $color-violet;
           }
         }
       }

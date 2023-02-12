@@ -1,44 +1,50 @@
-.footer__news-devider {
-  display: block;
-  width: 100px;
-  height: 1px;
-  margin-bottom: 30px;
-}
-
-.footer {
-
-  &__form {
+.form {
     width: 100%;
-    max-width: 48.125vw;
+    max-width: 77rem;
     margin: 0 auto;
-    background-color: silver;
+    //background-color: silver;
     text-align: center;
-    padding: 60px;
+    padding: 6rem;
 
-    &-address {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      color: #000000;
+    &__address {
+      line-height: 2.7rem;
+
+      &-item {
+        margin-bottom: 2.5rem;
+
+        &-icon {
+          color: $color-violet;
+        }
+
+        &-text {
+          margin-left: 1rem;
+        }
+      }
+
+      &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
-  }
 
-  &__form-wrapper {
+  &__wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
   }
 
-  &__form-inputs {
+  &__inputs {
+    width: 100%;
+    max-width: 31rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
-
   }
 
-  &__news-title {
+  &__title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -47,5 +53,32 @@
     color: #2C4058;
     text-transform: uppercase;
     margin-bottom: 42px;
+  }
+
+  &__button {
+    align-self: end;
+    max-width: 14rem;
+  }
+}
+
+.input {
+  font-family: $primary-title;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  min-height: 4rem;
+  border: none;
+  border-bottom: 1px solid $color-black-default;
+  color: $color-black-default;
+  opacity: 0.5;
+  margin-bottom: 3rem;
+
+  &:focus-visible {
+    outline: 0;
+    border-bottom: 1px solid $color-black-default;
+  }
+
+  &::placeholder {
+    color: #4B5562;
+    //opacity: 0.5;
   }
 }

@@ -25,14 +25,20 @@ body {
   max-width: $max-content-width;
 }
 
+.content-wrapper--smaller {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 77rem;
+}
+
 .text-wrapper {
 
   &--right {
-    margin-left: 60px;
+    margin-left: 6rem;
   }
 
   &--left {
-    margin-right: 60px;
+    margin-right: 6rem;
   }
 }
 
