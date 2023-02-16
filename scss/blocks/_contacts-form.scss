@@ -1,32 +1,37 @@
 .form {
-    width: 100%;
-    max-width: 77rem;
-    margin: 0 auto;
-    //background-color: silver;
-    text-align: center;
-    padding: 6rem;
+  width: 100%;
+  max-width: 77rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 6rem;
+  background-color: white;
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+//z-index: 2;
 
-    &__address {
-      line-height: 2.7rem;
+  &__address {
+    line-height: 2.7rem;
 
-      &-item {
-        margin-bottom: 2.5rem;
+    &-item {
+      margin-bottom: 2.5rem;
 
-        &-icon {
-          color: $color-violet;
-        }
-
-        &-text {
-          margin-left: 1rem;
-        }
+      &-icon {
+        color: $color-violet;
       }
 
-      &-list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+      &-text {
+        margin-left: 1rem;
       }
     }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 
   &__wrapper {
     display: flex;

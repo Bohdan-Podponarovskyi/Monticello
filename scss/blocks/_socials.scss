@@ -1,8 +1,11 @@
 .socials {
   display: flex;
   gap: 2rem;
-  flex-basis: 50%;
-  justify-content: end;
+
+  &__footer {
+    flex-basis: 50%;
+    justify-content: end;
+  }
 }
 .socials__icon-wrapper {
   width: 4.5rem;
@@ -12,7 +15,6 @@
   position: relative;
 }
 .socials__icon {
-  display: block;
   color: $color-white-default;
   position: absolute;
   top: 50%;

@@ -51,9 +51,9 @@
             content: "";
             position: absolute;
             top: -57px;
-            min-width: 585px;
+            max-width: 585px;
             width: 100%;
-            min-height: 470px;
+            max-height: 470px;
             height: 100%;
             z-index: -1;
           }
@@ -61,14 +61,14 @@
 
         &--left {
           &:before {
-            left: -215px;
+            right: 12.5vw;
             background-color: $color-blue-light;
           }
         }
 
         &--right {
           &:before {
-            right: -215px;
+            left: 12.5vw;
             background-color: $color-violet;
           }
         }

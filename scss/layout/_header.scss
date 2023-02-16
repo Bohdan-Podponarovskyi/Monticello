@@ -1,0 +1,152 @@
+.header {
+  box-sizing: border-box;
+  padding: 5rem;
+  background-image: url('./../img/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 51vw;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(243.43deg, $color-violet 16.9%, $color-blue-light 83.27%);
+  }
+
+  &__banner {
+    text-align: center;
+    margin-top: 13.9375vw;
+
+    &-title {
+      font-size: 8rem;
+      line-height: 98px;
+      letter-spacing: 0.1rem;
+      color: $color-white-default;
+      margin-bottom: 2rem;
+    }
+
+    &-subtitle {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.3rem;
+      color: $color-white-default;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &-link {
+      font-family: $nav-text;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      color: $color-white-default;
+    }
+  }
+
+  &__slider-wrapper {
+    //&::after {
+    //  content: url(../img/Arrow.png);
+    //  //width: 40px;
+    //  //height: 40px;
+    //  //position: absolute;
+    //  //top: 90%;
+    //  //left: 50%;
+    //  //transform: translate(-50%, -50%);
+    //  //cursor: pointer;
+    //}
+  }
+
+  &__scroll-button {
+    display: block;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 1px solid $color-white-default;
+    border-radius: 50%;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    &-icon {
+      color: $color-white-default;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  //transform: translateY(50%);
+  //margin-right: 52px;
+  width: 10px;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  //position: absolute;
+  right: 0;
+   width: 20px;
+   height: 20px;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid white;
+  border-radius: 100px;
+  color: #FFF;
+}
+
+
+.slick-dots li.slick-active button:before {
+  background-color: white;
+}

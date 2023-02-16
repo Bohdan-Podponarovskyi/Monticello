@@ -397,14 +397,142 @@ a {
   text-decoration: none;
 }
 
+.header {
+  box-sizing: border-box;
+  padding: 5rem;
+  background-image: url("./../img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 51vw;
+  position: relative;
+}
+.header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
+}
+.header__banner {
+  text-align: center;
+  margin-top: 13.9375vw;
+}
+.header__banner-title {
+  font-size: 8rem;
+  line-height: 98px;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+.header__banner-subtitle {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.3rem;
+  color: #ffffff;
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.header__nav-link {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #ffffff;
+}
+.header__scroll-button {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.header__scroll-button-icon {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slick-dots {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  width: 10px;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid white;
+  border-radius: 100px;
+  color: #FFF;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: white;
+}
+
 .footer {
   background-image: url("./../img/footer-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 100%;
-  min-height: 549px;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 34.3125vw;
   position: relative;
+  padding-top: 200px;
 }
 .footer:after {
   content: "";
@@ -420,7 +548,7 @@ a {
   height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
 }
 
@@ -430,6 +558,11 @@ a {
   margin: 0 auto;
   text-align: center;
   padding: 6rem;
+  background-color: white;
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .form__address {
   line-height: 2.7rem;
@@ -503,8 +636,18 @@ a {
   margin-top: 4rem;
 }
 
-.logo {
+.logo__footer {
   flex-basis: 50%;
+}
+
+.contacts {
+  position: relative;
+  width: 100vw;
+  min-height: 43.75vw;
+}
+.contacts__map {
+  width: 100vw;
+  min-height: 43.75vw;
 }
 
 .projects__title {
@@ -546,24 +689,26 @@ a {
   content: "";
   position: absolute;
   top: -57px;
-  min-width: 585px;
+  max-width: 585px;
   width: 100%;
-  min-height: 470px;
+  max-height: 470px;
   height: 100%;
   z-index: -1;
 }
 .projects__project-picture-wrapper--left:before {
-  left: -215px;
+  right: 12.5vw;
   background-color: #55B7FF;
 }
 .projects__project-picture-wrapper--right:before {
-  right: -215px;
+  left: 12.5vw;
   background-color: #7E5AFF;
 }
 
 .socials {
   display: flex;
   gap: 2rem;
+}
+.socials__footer {
   flex-basis: 50%;
   justify-content: end;
 }
@@ -577,7 +722,6 @@ a {
 }
 
 .socials__icon {
-  display: block;
   color: #ffffff;
   position: absolute;
   top: 50%;
