@@ -9,7 +9,9 @@
   bottom: -150px;
   left: 50%;
   transform: translateX(-50%);
-//z-index: 2;
+  background-image: url('./../img/form-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__address {
     line-height: 2.7rem;
@@ -50,14 +52,9 @@
   }
 
   &__title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 54px;
-    color: #2C4058;
-    text-transform: uppercase;
-    margin-bottom: 42px;
+    font-size: 4.4rem;
+    line-height: 5.4rem;
+    margin-bottom: 4.2rem;
   }
 
   &__button {
@@ -72,18 +69,18 @@
   line-height: 2.7rem;
   min-height: 4rem;
   border: none;
-  border-bottom: 1px solid $color-black-default;
-  color: $color-black-default;
+  border-bottom: 1px solid #2C4058;
   opacity: 0.5;
   margin-bottom: 3rem;
 
   &:focus-visible {
+    color: $color-black-default;
     outline: 0;
     border-bottom: 1px solid $color-black-default;
+    opacity: 1;
   }
 
   &::placeholder {
     color: #4B5562;
-    //opacity: 0.5;
   }
 }

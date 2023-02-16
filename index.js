@@ -5,8 +5,8 @@ $('.header__slider-wrapper').slick({
     nextArrow: false,
     vertical: true,
     speed: 120
-
 });
+
 document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

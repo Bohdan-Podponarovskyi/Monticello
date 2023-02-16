@@ -405,7 +405,7 @@ a {
   background-size: cover;
   width: 100vw;
   max-width: 100%;
-  min-height: 51vw;
+  height: 100vh;
   position: relative;
 }
 .header:after {
@@ -418,7 +418,7 @@ a {
   left: 0;
   background: linear-gradient(243.43deg, #7E5AFF 16.9%, #55B7FF 83.27%);
 }
-.header__banner {
+.header__banner-text {
   text-align: center;
   margin-top: 13.9375vw;
 }
@@ -480,27 +480,18 @@ a {
   position: absolute;
   left: 100%;
   top: 50%;
-  width: 10px;
+  width: 1px;
 }
 
 .slick-dots li {
-  position: relative;
-  display: inline-block;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  padding: 0;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 .slick-dots li button {
-  font-size: 0;
-  line-height: 0;
   display: block;
-  width: 8px;
-  height: 8px;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   color: transparent;
   border: 0;
@@ -511,13 +502,11 @@ a {
 .slick-dots li button:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
+  width: 1rem;
+  height: 1rem;
   border: 1px solid white;
-  border-radius: 100px;
-  color: #FFF;
+  border-radius: 50px;
+  color: #ffffff;
 }
 
 .slick-dots li.slick-active button:before {
@@ -530,7 +519,8 @@ a {
   background-size: cover;
   width: 100vw;
   max-width: 100%;
-  min-height: 34.3125vw;
+  height: 34.3125vw;
+  max-height: 550px;
   position: relative;
   padding-top: 200px;
 }
@@ -563,6 +553,9 @@ a {
   bottom: -150px;
   left: 50%;
   transform: translateX(-50%);
+  background-image: url("./../img/form-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .form__address {
   line-height: 2.7rem;
@@ -596,14 +589,9 @@ a {
   flex-direction: column;
 }
 .form__title {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 44px;
-  line-height: 54px;
-  color: #2C4058;
-  text-transform: uppercase;
-  margin-bottom: 42px;
+  font-size: 4.4rem;
+  line-height: 5.4rem;
+  margin-bottom: 4.2rem;
 }
 .form__button {
   align-self: end;
@@ -616,14 +604,15 @@ a {
   line-height: 2.7rem;
   min-height: 4rem;
   border: none;
-  border-bottom: 1px solid #000000;
-  color: #000000;
+  border-bottom: 1px solid #2C4058;
   opacity: 0.5;
   margin-bottom: 3rem;
 }
 .input:focus-visible {
+  color: #000000;
   outline: 0;
   border-bottom: 1px solid #000000;
+  opacity: 1;
 }
 .input::placeholder {
   color: #4B5562;
@@ -642,14 +631,16 @@ a {
 
 .contacts {
   position: relative;
-  width: 100vw;
-  min-height: 43.75vw;
 }
 .contacts__map {
   width: 100vw;
+  max-width: 100%;
   min-height: 43.75vw;
 }
 
+.projects {
+  padding-top: 10rem;
+}
 .projects__title {
   text-align: center;
   margin-bottom: 15rem;
