@@ -16,43 +16,9 @@ document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
         });
     });
 });
-// $('.header__banner').slick({
-//   dots: true,
-//   infinite: false,
-//   speed: 300,
-//   slidesToShow: 4,
-//   slidesToScroll: 4,
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 3,
-//         slidesToScroll: 3,
-//         infinite: true,
-//         dots: true
-//       }
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 2
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1
-//       }
-//     }
-//     // You can unslick at a given breakpoint now by adding:
-//     // settings: "unslick"
-//     // instead of a settings object
-//   ]
-// });
+
 let map;
-let marker;
+let mapMarker;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -61,11 +27,25 @@ function initMap() {
         mapId: '766b53887ab54fb2'
     });
 
-    marker = new google.maps.Marker({
+    mapMarker = new google.maps.Marker({
         position: { lat: 40.685429, lng: -73.943844},
         map: map,
-        icon: './img/map-marker.svg',
+        icon: {
+            url: './img/map-marker.svg',
+            scaledSize: new google.maps.Size(100, 100),
+            // origin: new google.maps.Point(0, 0),
+            // anchor: new google.maps.Point(25, 25),
+            // duration: 500000, // Duration of one animation cycle (in ms)
+            // delay: 500, // Delay before the animation starts (in ms)
+            // easing: 'easeInOut',
+        },
+        animation: google.maps.Animation.BOUNCE,
     })
+
+    // mapMarker.setAnimation(google.maps.Animation.BOUNCE);
+    // setTimeout(function(){ mapMarker.setAnimation(null); }, 450);
+
 }
 
 window.initMap = initMap;
+
