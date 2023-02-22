@@ -25,6 +25,12 @@
 
       &-button {
         margin-bottom: 60px;
+
+        &:hover {
+          background: linear-gradient(251.06deg, $color-violet -2.19%, $color-blue-light 103.21%);
+          color: white;
+          border: 1px solid white;
+        }
       }
 
       &-location {
@@ -62,14 +68,14 @@
 
         &--left {
           &:before {
-            right: 12.5vw;
+            right: 260px;
             background-color: $color-blue-light;
           }
         }
 
         &--right {
           &:before {
-            left: 12.5vw;
+            left: 260px;
             background-color: $color-violet;
           }
         }

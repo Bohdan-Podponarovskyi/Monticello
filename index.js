@@ -4,7 +4,11 @@ $('.header__slider-wrapper').slick({
     prevArrow: false,
     nextArrow: false,
     vertical: true,
-    speed: 120
+    speed: 120,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    // pauseOnFocus: true
 });
 
 document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {

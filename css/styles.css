@@ -420,7 +420,7 @@ a {
 }
 .header__banner-text {
   text-align: center;
-  margin-top: 13.9375vw;
+  margin-top: 30vh;
 }
 .header__banner-title {
   font-size: 8rem;
@@ -452,11 +452,27 @@ a {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #ffffff;
+  position: relative;
+}
+.header__nav-link:before {
+  content: "";
+  display: inline-block;
+  min-width: 1rem;
+  min-height: 1rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+.header__nav-link:hover:before {
+  background-color: white;
 }
 .header__scroll-button {
   display: block;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 100%;
+  max-width: 4.5rem;
+  height: 100%;
+  max-height: 4.5rem;
   border: 1px solid #ffffff;
   border-radius: 50%;
   position: absolute;
@@ -734,6 +750,11 @@ a {
 .projects__project-button {
   margin-bottom: 60px;
 }
+.projects__project-button:hover {
+  background: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
+  color: white;
+  border: 1px solid white;
+}
 .projects__project-location-icon {
   height: 100%;
   min-height: 17px;
@@ -759,11 +780,11 @@ a {
   z-index: -1;
 }
 .projects__project-picture-wrapper--left:before {
-  right: 12.5vw;
+  right: 260px;
   background-color: #55B7FF;
 }
 .projects__project-picture-wrapper--right:before {
-  left: 12.5vw;
+  left: 260px;
   background-color: #7E5AFF;
 }
 
@@ -775,15 +796,6 @@ a {
   flex-basis: 50%;
   justify-content: end;
 }
-
-.socials__icon-wrapper {
-  width: 4.5rem;
-  height: 4.5rem;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  position: relative;
-}
-
 .socials__icon {
   color: #ffffff;
   position: absolute;
@@ -792,6 +804,20 @@ a {
   transform: translate(-50%, -50%);
   font-size: 1.6rem;
   line-height: 0;
+  z-index: 1;
+}
+.socials__icon-wrapper {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+.socials__icon-wrapper:hover {
+  background-color: #ffffff;
+}
+.socials__icon-wrapper:hover .socials__icon {
+  color: #7E5AFF;
 }
 
 .button {
