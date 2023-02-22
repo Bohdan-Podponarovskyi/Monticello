@@ -8,4 +8,10 @@
   border: 1px solid $color-blue;
   padding: 1.5rem 4rem;
   background-color: transparent;
+
+  &:hover {
+    background: linear-gradient(251.06deg, $color-violet -2.19%, $color-blue-light 103.21%);
+    color: white;
+    border: 1px solid white;
+  }
 }

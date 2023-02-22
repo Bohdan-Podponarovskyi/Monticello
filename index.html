@@ -252,10 +252,14 @@
                         </li>
                     </ul>
                 </div>
-                <form action="submit" class="form__inputs">
-                    <input type="text" class="form__inputs-name input" placeholder="Name">
-                    <input type="email" class="form__inputs-email input" placeholder="Email">
-                    <button type="submit" class="form__button button">submit</button>
+                <form class="form__inputs" id="formInputs" action="#" method="get">
+                    <label for="name" class="form__inputs-label">
+                        <input type="text" class="form__inputs-name input" placeholder="Name" id="name" name="name">
+                    </label>
+                    <label for="email" class="form__inputs-label">
+                        <input type="email" class="form__inputs-email input" placeholder="Email" id="email" name="email">
+                    </label>
+                    <input type="submit" value="submit" class="form__button button">submit</input>
                 </form>
             </div>
         </section>
