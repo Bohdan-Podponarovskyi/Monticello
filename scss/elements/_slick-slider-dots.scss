@@ -134,6 +134,7 @@ main .slick-dots li.slick-active button:before {
   //left: 50%;
   //transform: translate(-50%, -50%);
   cursor: pointer;
+  opacity: 0.7;
 
   &--prev {
     top:50%;
@@ -149,6 +150,7 @@ main .slick-dots li.slick-active button:before {
 
   &:hover {
     background-color: white;
+    opacity: 1;
   }
 
   &:hover &__icon {

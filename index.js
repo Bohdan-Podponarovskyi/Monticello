@@ -11,26 +11,25 @@ $('.header__slider-wrapper').slick({
     // pauseOnFocus: true
 });
 
-document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
+// document.querySelectorAll('a[id]').forEach(anchor => {
 //     anchor.addEventListener('click', function (e) {
-//         if (this.getAttribute('href').startsWith('#')) {
-//             e.preventDefault();
-//             document.querySelector(this.getAttribute('href')).scrollIntoView({
-//                 behavior: 'smooth'
-//             });
-//         }
+//         e.preventDefault();
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
 //     });
 // });
+
+document.querySelectorAll('a.header__nav-link, a.header__scroll-button').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
 let map;
 let mapMarker;
@@ -61,6 +60,20 @@ function initMap() {
     // setTimeout(function(){ mapMarker.setAnimation(null); }, 450);
 
 }
+
+$('.news__slider-wrapper--inner').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.slick-button--prev'),
+    nextArrow: $('.slick-button--next'),
+    // centerMode: true,
+    // centerPadding: "40px"
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+});
 
 window.initMap = initMap;
 
