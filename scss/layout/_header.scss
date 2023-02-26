@@ -101,6 +101,14 @@
     transform: translate(-50%, -50%);
     cursor: pointer;
 
+    &:hover {
+      background-color: white;
+    }
+
+    &:hover &-icon {
+      color: $color-violet;
+    }
+
     &-icon {
       color: $color-white-default;
       position: absolute;

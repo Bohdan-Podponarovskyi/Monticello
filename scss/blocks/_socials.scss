@@ -26,34 +26,11 @@
 
       &:hover {
         background-color: $color-white-default;
-        //color: black;
       }
 
       &:hover .socials__icon {
-        //background-color: $color-white-default;
         color: $color-violet;
       }
     }
   }
 }
-//.socials__icon-wrapper {
-//  width: 4.5rem;
-//  height: 4.5rem;
-//  border: 1px solid $color-white-default;
-//  border-radius: 50%;
-//  position: relative;
-//
-//  &:hover {
-//    background-color: $color-white-default;
-//    //color: black;
-//  }
-//}
-////.socials__icon {
-////  color: $color-white-default;
-////  position: absolute;
-////  top: 50%;
-////  left: 50%;
-////  transform: translate(-50%, -50%);
-////  font-size: 1.6rem;
-////  line-height: 0;
-////}

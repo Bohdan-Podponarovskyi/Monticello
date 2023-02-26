@@ -21,6 +21,17 @@ document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
     });
 });
 
+// document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         if (this.getAttribute('href').startsWith('#')) {
+//             e.preventDefault();
+//             document.querySelector(this.getAttribute('href')).scrollIntoView({
+//                 behavior: 'smooth'
+//             });
+//         }
+//     });
+// });
+
 let map;
 let mapMarker;
 
