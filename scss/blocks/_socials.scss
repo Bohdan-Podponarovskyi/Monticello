@@ -26,10 +26,12 @@
 
       &:hover {
         background-color: $color-white-default;
+        transition: all 300ms ease-in-out;
       }
 
       &:hover .socials__icon {
         color: $color-violet;
+        transition: all 300ms ease-in-out;
       }
     }
   }

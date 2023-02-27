@@ -1,6 +1,5 @@
 .gallery {
   padding-top: 15rem;
-  //text-align: center;
   display: flex;
   flex-direction: column;
 
@@ -36,17 +35,19 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    //transform: translate(50%, 50%);
-    width: 100%;
     display: none;
     opacity: 0.8;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+
   }
 
   &__magnifying-glass-icon {
-    width: 100%;
-    min-width: 70px;
-    height: 100%;
-    min-height: 70px;
+    font-size: 5rem;
+
+    //&:first-child {
+    //  font-size: 7rem;
+    //}
   }
 
   &__button {
@@ -58,4 +59,12 @@
 .gallery__photo-box:hover .gallery__hover-button {
   display: flex;
   cursor: pointer;
+
 }
+
+//.gallery__photo-box:hover .gallery__magnifying-glass-icon {
+//  width: 100%;
+//  min-width: 150px;
+//  height: 100%;
+//  min-height: 150px;
+//}

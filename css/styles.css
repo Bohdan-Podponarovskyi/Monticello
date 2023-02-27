@@ -372,6 +372,7 @@ body {
   font-style: normal;
   font-weight: 400;
   color: #000000;
+  scroll-behavior: smooth;
 }
 
 .content-wrapper {
@@ -445,7 +446,7 @@ a {
 .header__nav {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 3rem;
 }
 .header__nav-link {
   font-family: "Source Sans Pro", sans-serif;
@@ -453,6 +454,10 @@ a {
   line-height: 1.8rem;
   color: #ffffff;
   position: relative;
+}
+.header__nav-link:hover {
+  transform: scale3d(120%, 120%, 120%);
+  transition: all 300ms ease-in-out;
 }
 .header__nav-link:before {
   content: "";
@@ -462,7 +467,7 @@ a {
   border: 1px solid white;
   border-radius: 50px;
   color: #ffffff;
-  margin-right: 10px;
+  margin-right: 0.5rem;
   vertical-align: center;
 }
 .header__nav-link:hover:before {
@@ -481,9 +486,12 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  opacity: 0.7;
 }
 .header__scroll-button:hover {
   background-color: white;
+  opacity: 1;
+  transition: all 300ms ease-out;
 }
 .header__scroll-button:focus {
   color: transparent;
@@ -542,7 +550,51 @@ a {
 .button:hover {
   background: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
   color: white;
-  border: 1px solid white;
+  border: 1px solid #ffffff;
+  transition: all 200ms ease-out;
+}
+.button__scroll-to-top {
+  width: 100%;
+  max-width: 4.5rem;
+  height: 100%;
+  max-height: 4.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  position: fixed;
+  top: 90%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: none;
+}
+.button__scroll-to-top:hover {
+  background-color: white;
+  opacity: 1;
+  transition: all 300ms ease-out;
+}
+.button__scroll-to-top:hover .button__scroll-to-top-icon {
+  color: #7E5AFF;
+}
+.button__scroll-to-top-icon {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button__scroll-to-top.show {
+  display: block;
+}
+
+.violet-button {
+  background-color: violet;
+  display: block;
+}
+
+.white-button {
+  background-color: white;
+  display: block;
 }
 
 .divider {
@@ -664,6 +716,7 @@ main .slick-dots li.slick-active button:before {
 .slick-button:hover {
   background-color: white;
   opacity: 1;
+  transition: all 300ms ease-out;
 }
 .slick-button:hover .slick-button__icon {
   color: #7E5AFF;
@@ -686,6 +739,7 @@ main .slick-dots li.slick-active button:before {
   position: absolute;
   bottom: -150px;
   left: 50%;
+  z-index: 1;
   transform: translateX(-50%);
   background-image: url("./../img/form-bg.png");
   background-repeat: no-repeat;
@@ -716,6 +770,7 @@ main .slick-dots li.slick-active button:before {
   height: 100%;
 }
 .form__inputs {
+  box-sizing: border-box;
   width: 100%;
   max-width: 31rem;
   height: 100%;
@@ -723,7 +778,9 @@ main .slick-dots li.slick-active button:before {
   flex-direction: column;
 }
 .form__inputs-label {
-  display: inline;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 31rem;
 }
 .form__title {
   font-size: 4.4rem;
@@ -746,10 +803,8 @@ main .slick-dots li.slick-active button:before {
   line-height: 2.7rem;
   min-height: 4rem;
   border: none;
-  border-bottom: 1px solid #2C4058;
-  opacity: 0.5;
+  border-bottom: 1px solid #bcbfc9;
   margin-bottom: 3rem;
-  color: #000000;
 }
 .input:focus-visible {
   color: #000000;
@@ -759,6 +814,7 @@ main .slick-dots li.slick-active button:before {
 }
 .input::placeholder {
   color: #4B5562;
+  opacity: 0.5;
 }
 
 .copyrights {
@@ -799,15 +855,13 @@ main .slick-dots li.slick-active button:before {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
   display: none;
   opacity: 0.8;
+  transform: translate(-50%, -50%);
+  font-size: 150px;
 }
 .gallery__magnifying-glass-icon {
-  width: 100%;
-  min-width: 70px;
-  height: 100%;
-  min-height: 70px;
+  font-size: 5rem;
 }
 .gallery__button {
   margin: 6rem auto 15rem;
@@ -1001,9 +1055,11 @@ main .slick-dots li.slick-active button:before {
 }
 .socials__icon-wrapper:hover {
   background-color: #ffffff;
+  transition: all 300ms ease-in-out;
 }
 .socials__icon-wrapper:hover .socials__icon {
   color: #7E5AFF;
+  transition: all 300ms ease-in-out;
 }
 
 /*# sourceMappingURL=styles.css.map */

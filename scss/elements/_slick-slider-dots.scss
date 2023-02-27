@@ -151,6 +151,7 @@ main .slick-dots li.slick-active button:before {
   &:hover {
     background-color: white;
     opacity: 1;
+    transition: all 300ms ease-out;
   }
 
   &:hover &__icon {
