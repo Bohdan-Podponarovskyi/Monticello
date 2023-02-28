@@ -64,6 +64,7 @@
           &:before {
             right: 260px;
             background-color: $color-blue-light;
+            opacity: 0.85;
           }
         }
 
@@ -71,6 +72,7 @@
           &:before {
             left: 260px;
             background-color: $color-violet;
+            opacity: 0.85;
           }
         }
       }

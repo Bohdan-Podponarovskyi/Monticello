@@ -8,17 +8,9 @@ $('.header__slider-wrapper').slick({
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    // pauseOnFocus: true
 });
 
-// document.querySelectorAll('a[id]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+//
 
 document.querySelectorAll('a.header__nav-link, a.header__scroll-button').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -30,6 +22,8 @@ document.querySelectorAll('a.header__nav-link, a.header__scroll-button').forEach
         }
     });
 });
+
+//
 
 let map;
 let mapMarker;
@@ -47,19 +41,14 @@ function initMap() {
         icon: {
             url: './img/map-marker.svg',
             scaledSize: new google.maps.Size(100, 100),
-            // origin: new google.maps.Point(0, 0),
-            // anchor: new google.maps.Point(25, 25),
-            // duration: 500000, // Duration of one animation cycle (in ms)
-            // delay: 500, // Delay before the animation starts (in ms)
-            // easing: 'easeInOut',
         },
         animation: google.maps.Animation.BOUNCE,
     })
-
-    // mapMarker.setAnimation(google.maps.Animation.BOUNCE);
-    // setTimeout(function(){ mapMarker.setAnimation(null); }, 450);
-
 }
+
+window.initMap = initMap;
+
+//
 
 $('.news__slider-wrapper--inner').slick({
     dots: true,
@@ -68,12 +57,32 @@ $('.news__slider-wrapper--inner').slick({
     slidesToScroll: 1,
     prevArrow: $('.slick-button--prev'),
     nextArrow: $('.slick-button--next'),
-    // centerMode: true,
-    // centerPadding: "40px"
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
 });
 
-window.initMap = initMap;
+//
 
+const scrollToTopButton = document.querySelector('.button__scroll-to-top');
+
+// Get a reference to the footer element
+const footer = document.querySelector('footer');
+
+// Listen for scroll events on the window object
+window.addEventListener('scroll', () => {
+    // Get the distance between the top of the footer and the user's current scroll position
+    const distanceFromFooter = footer.getBoundingClientRect().top - window.innerHeight;
+
+    // If the user has scrolled past the footer, show the button
+    if (distanceFromFooter <= -90) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+// Scroll to the top of the page when the button is clicked
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

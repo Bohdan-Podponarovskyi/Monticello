@@ -558,43 +558,28 @@ a {
   max-width: 4.5rem;
   height: 100%;
   max-height: 4.5rem;
+  color: #ffffff;
   border: 1px solid #ffffff;
-  border-radius: 50%;
+  border-radius: 50px;
   position: fixed;
-  top: 90%;
-  right: 3%;
+  bottom: 25px;
+  right: 25px;
   transform: translate(-50%, -50%);
   cursor: pointer;
   display: none;
+  opacity: 0.7;
 }
 .button__scroll-to-top:hover {
   background-color: white;
   opacity: 1;
   transition: all 300ms ease-out;
-}
-.button__scroll-to-top:hover .button__scroll-to-top-icon {
   color: #7E5AFF;
 }
 .button__scroll-to-top-icon {
-  color: #ffffff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.button__scroll-to-top.show {
-  display: block;
-}
-
-.violet-button {
-  background-color: violet;
-  display: block;
-}
-
-.white-button {
-  background-color: white;
-  display: block;
 }
 
 .divider {
@@ -1022,10 +1007,12 @@ main .slick-dots li.slick-active button:before {
 .projects__project-picture-wrapper--left:before {
   right: 260px;
   background-color: #55B7FF;
+  opacity: 0.85;
 }
 .projects__project-picture-wrapper--right:before {
   left: 260px;
   background-color: #7E5AFF;
+  opacity: 0.85;
 }
 
 .socials {
