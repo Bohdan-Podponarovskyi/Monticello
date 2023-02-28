@@ -111,7 +111,7 @@ main .slick-dots li.slick-active button:before {
     left: -6rem;
 
     &:hover {
-      transform: scale(1.1) translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(1.1) ;
     }
   }
 
@@ -121,7 +121,7 @@ main .slick-dots li.slick-active button:before {
     transform: translate(50%, -50%);
 
     &:hover {
-      transform: scale(1.1) translate(50%, -50%);
+      transform: translate(50%, -50%) scale(1.1);
     }
   }
 
