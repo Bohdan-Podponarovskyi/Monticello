@@ -11,11 +11,6 @@ header .slick-dots {
 header .slick-dots li {
   cursor: pointer;
   margin-bottom: 4rem;
-
-  &:hover {
-    transform: scale3d(130%, 130%, 130%);
-    transition: all 300ms ease-in-out;
-  }
 }
 
 header .slick-dots li button {
@@ -62,12 +57,6 @@ main .slick-dots {
 main .slick-dots li {
   cursor: pointer;
   margin-top: 4rem;
-
-  &:hover {
-    transform: scale3d(130%, 130%, 130%);
-    transform-origin: center center;
-    transition: all 300ms ease-in-out;
-  }
 }
 
 main .slick-dots li button {

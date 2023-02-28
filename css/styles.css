@@ -484,11 +484,9 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  opacity: 0.7;
 }
 .header__scroll-button:hover {
   background-color: white;
-  opacity: 1;
   transform: scale(1.1) translate(-50%, -50%);
   transform-origin: center center;
   transition: all 300ms ease-out;
@@ -568,11 +566,9 @@ a {
   transform: translate(-50%, -50%);
   cursor: pointer;
   display: none;
-  opacity: 0.7;
 }
 .button__scroll-to-top:hover {
   background-color: white;
-  opacity: 1;
   transition: all 300ms ease-out;
   color: #7E5AFF;
   transform: scale(1.1) translate(-50%, -50%);
@@ -605,10 +601,6 @@ header .slick-dots {
 header .slick-dots li {
   cursor: pointer;
   margin-bottom: 4rem;
-}
-header .slick-dots li:hover {
-  transform: scale3d(130%, 130%, 130%);
-  transition: all 300ms ease-in-out;
 }
 
 header .slick-dots li button {
@@ -648,11 +640,6 @@ main .slick-dots {
 main .slick-dots li {
   cursor: pointer;
   margin-top: 4rem;
-}
-main .slick-dots li:hover {
-  transform: scale3d(130%, 130%, 130%);
-  transform-origin: center center;
-  transition: all 300ms ease-in-out;
 }
 
 main .slick-dots li button {
