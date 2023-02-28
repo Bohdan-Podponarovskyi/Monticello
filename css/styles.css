@@ -446,7 +446,7 @@ a {
 .header__nav {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 4rem;
 }
 .header__nav-link {
   font-family: "Source Sans Pro", sans-serif;
@@ -454,10 +454,6 @@ a {
   line-height: 1.8rem;
   color: #ffffff;
   position: relative;
-}
-.header__nav-link:hover {
-  transform: scale3d(120%, 120%, 120%);
-  transition: all 300ms ease-in-out;
 }
 .header__nav-link:before {
   content: "";
@@ -467,11 +463,13 @@ a {
   border: 1px solid white;
   border-radius: 50px;
   color: #ffffff;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   vertical-align: center;
 }
 .header__nav-link:hover:before {
   background-color: white;
+  transform: scale3d(150%, 150%, 150%);
+  transition: all 300ms ease-in-out;
 }
 .header__scroll-button {
   display: block;
@@ -491,6 +489,8 @@ a {
 .header__scroll-button:hover {
   background-color: white;
   opacity: 1;
+  transform: scale(1.1) translate(-50%, -50%);
+  transform-origin: center center;
   transition: all 300ms ease-out;
 }
 .header__scroll-button:focus {
@@ -551,7 +551,8 @@ a {
   background: linear-gradient(251.06deg, #7E5AFF -2.19%, #55B7FF 103.21%);
   color: white;
   border: 1px solid #ffffff;
-  transition: all 200ms ease-out;
+  transition: all 300ms ease-in-out;
+  transform: scale(1.1);
 }
 .button__scroll-to-top {
   width: 100%;
@@ -574,6 +575,8 @@ a {
   opacity: 1;
   transition: all 300ms ease-out;
   color: #7E5AFF;
+  transform: scale(1.1) translate(-50%, -50%);
+  transform-origin: center center;
 }
 .button__scroll-to-top-icon {
   position: absolute;
@@ -602,6 +605,10 @@ header .slick-dots {
 header .slick-dots li {
   cursor: pointer;
   margin-bottom: 4rem;
+}
+header .slick-dots li:hover {
+  transform: scale3d(130%, 130%, 130%);
+  transition: all 300ms ease-in-out;
 }
 
 header .slick-dots li button {
@@ -642,6 +649,11 @@ main .slick-dots li {
   cursor: pointer;
   margin-top: 4rem;
 }
+main .slick-dots li:hover {
+  transform: scale3d(130%, 130%, 130%);
+  transform-origin: center center;
+  transition: all 300ms ease-in-out;
+}
 
 main .slick-dots li button {
   display: block;
@@ -667,18 +679,6 @@ main .slick-dots li.slick-active button:before {
   background-color: white;
 }
 
-.slick-prev, .slick-next {
-  transform: translateX(-50%);
-}
-
-.slick-prev {
-  margin-right: 50px;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-size: 4rem;
-}
-
 .slick-button {
   min-width: 4.5rem;
   min-height: 4.5rem;
@@ -687,16 +687,24 @@ main .slick-dots li.slick-active button:before {
   position: absolute;
   cursor: pointer;
   opacity: 0.7;
+  transition: all 300ms ease-out;
+  transform-origin: center center;
 }
 .slick-button--prev {
   top: 50%;
   transform: translate(-50%, -50%);
   left: -6rem;
 }
+.slick-button--prev:hover {
+  transform: scale(1.1) translate(-50%, -50%);
+}
 .slick-button--next {
   top: 50%;
   right: -6rem;
   transform: translate(50%, -50%);
+}
+.slick-button--next:hover {
+  transform: scale(1.1) translate(50%, -50%);
 }
 .slick-button:hover {
   background-color: white;
@@ -841,12 +849,18 @@ main .slick-dots li.slick-active button:before {
   top: 50%;
   left: 50%;
   display: none;
-  opacity: 0.8;
   transform: translate(-50%, -50%);
   font-size: 150px;
 }
 .gallery__magnifying-glass-icon {
   font-size: 5rem;
+  opacity: 0.8;
+}
+.gallery__magnifying-glass-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transform-origin: center center;
+  transition: all 300ms ease-out;
 }
 .gallery__button {
   margin: 6rem auto 15rem;
@@ -855,6 +869,7 @@ main .slick-dots li.slick-active button:before {
 .gallery__photo-box:hover .gallery__hover-button {
   display: flex;
   cursor: pointer;
+  opacity: 1;
 }
 
 .logo__footer {
@@ -991,6 +1006,10 @@ main .slick-dots li.slick-active button:before {
   line-height: 2rem;
   margin-left: 10px;
 }
+.projects__project-picture {
+  width: 39.375vw;
+  max-width: 630px;
+}
 .projects__project-picture-wrapper {
   position: relative;
 }
@@ -998,10 +1017,10 @@ main .slick-dots li.slick-active button:before {
   content: "";
   position: absolute;
   top: -57px;
+  width: 36.5625vw;
   max-width: 585px;
-  width: 100%;
-  max-height: 470px;
   height: 100%;
+  max-height: 29.375vw;
   z-index: -1;
 }
 .projects__project-picture-wrapper--left:before {
@@ -1042,6 +1061,7 @@ main .slick-dots li.slick-active button:before {
 }
 .socials__icon-wrapper:hover {
   background-color: #ffffff;
+  transform: scale3d(110%, 110%, 110%);
   transition: all 300ms ease-in-out;
 }
 .socials__icon-wrapper:hover .socials__icon {

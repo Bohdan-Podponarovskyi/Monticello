@@ -26,6 +26,7 @@
 
       &:hover {
         background-color: $color-white-default;
+        transform: scale3d(110%, 110%, 110%);
         transition: all 300ms ease-in-out;
       }
 
