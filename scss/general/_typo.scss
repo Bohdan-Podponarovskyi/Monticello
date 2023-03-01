@@ -7,11 +7,21 @@
     font-weight: 700;
     font-size: 4.4rem;
     line-height: 5.4rem;
+
+    @media screen and (max-width: $tablet-start) {
+      font-size: 2.2rem;
+      line-height: 2.7rem;
+    }
   }
 
   &--secondary {
     font-weight: 400;
     font-size: 2.2rem;
     line-height: 2.7rem;
+
+    @media screen and (max-width: $tablet-start) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
   }
 }

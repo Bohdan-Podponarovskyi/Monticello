@@ -352,10 +352,22 @@ textarea {
   font-size: 4.4rem;
   line-height: 5.4rem;
 }
+@media screen and (max-width: 768px) {
+  .title--primary {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+  }
+}
 .title--secondary {
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 2.7rem;
+}
+@media screen and (max-width: 768px) {
+  .title--secondary {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
 }
 
 * {
@@ -374,24 +386,45 @@ body {
   color: #000000;
   scroll-behavior: smooth;
 }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+}
 
 .content-wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1170px;
 }
-
 .content-wrapper--smaller {
   margin: 0 auto;
   width: 100%;
   max-width: 77rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .content-wrapper {
+    padding: 0 20px;
+  }
+}
 .text-wrapper--right {
   margin-left: 6rem;
 }
+@media screen and (max-width: 768px) {
+  .text-wrapper--right {
+    margin-left: 3rem;
+    text-align: right;
+  }
+}
 .text-wrapper--left {
   margin-right: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .text-wrapper--left {
+    margin-right: 0;
+  }
 }
 
 a {
@@ -516,11 +549,10 @@ a {
     position: absolute;
     top: 80px;
     right: 0;
-    background: linear-gradient(243.43deg, #55B7FF 16.9%, #7E5AFF 83.27%);
+    background: linear-gradient(243.43deg, rgba(85, 183, 255, 0.6) 16.9%, rgba(126, 90, 255, 0.6) 83.27%);
     border-top: 1px solid #ffffff;
     box-shadow: #4B5562;
-    z-index: 999;
-    opacity: 0.7;
+    z-index: 1;
     transition: all 0.5s ease-in-out;
   }
   .header__nav-link {
@@ -530,6 +562,7 @@ a {
     align-items: center;
     border-bottom: 1px solid #ffffff;
     padding: 20px 20px 20px;
+    color: white;
   }
   .header__nav-link:before {
     display: none;
@@ -538,6 +571,7 @@ a {
     display: flex;
     width: 50%;
     gap: 0;
+    color: white;
     justify-content: center;
   }
 }
@@ -1042,6 +1076,11 @@ main .slick-dots li.slick-active button:before {
   text-align: center;
   margin-bottom: 15rem;
 }
+@media screen and (max-width: 1024px) {
+  .projects__title {
+    margin-bottom: 5rem;
+  }
+}
 .projects__project {
   display: flex;
   margin-bottom: 17rem;
@@ -1053,11 +1092,31 @@ main .slick-dots li.slick-active button:before {
   line-height: 3rem;
   margin-bottom: 4rem;
 }
+@media screen and (max-width: 768px) {
+  .projects__project-description {
+    margin-bottom: 2rem;
+  }
+}
 .projects__project-text {
   padding-top: 7rem;
 }
+@media screen and (max-width: 1024px) {
+  .projects__project-text {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects__project-text {
+    flex-basis: 50%;
+  }
+}
 .projects__project-button {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .projects__project-button {
+    margin-bottom: 2rem;
+  }
 }
 .projects__project-location-icon {
   height: 100%;
@@ -1074,8 +1133,25 @@ main .slick-dots li.slick-active button:before {
   width: 39.375vw;
   max-width: 630px;
 }
+@media screen and (max-width: 768px) {
+  .projects__project-picture {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .projects__project-picture {
+    height: 29.375vw;
+  }
+}
 .projects__project-picture-wrapper {
   position: relative;
+  display: flex;
+  flex-basis: 50%;
+}
+@media screen and (max-width: 1024px) {
+  .projects__project-picture-wrapper {
+    margin-bottom: 2rem;
+  }
 }
 .projects__project-picture-wrapper--left:before, .projects__project-picture-wrapper--right:before {
   content: "";
@@ -1098,6 +1174,28 @@ main .slick-dots li.slick-active button:before {
   opacity: 0.85;
 }
 
+@media screen and (max-width: 1024px) {
+  .projects__project-picture-wrapper--left:before, .projects__project-picture-wrapper--right:before {
+    top: 20px;
+  }
+  .projects__project-picture-wrapper--left:before {
+    right: -15px;
+  }
+  .projects__project-picture-wrapper--right:before {
+    left: -15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects__project-picture-wrapper--left:before, .projects__project-picture-wrapper--right:before {
+    top: 20px;
+  }
+  .projects__project-picture-wrapper--left:before {
+    right: -15px;
+  }
+  .projects__project-picture-wrapper--right:before {
+    left: -15px;
+  }
+}
 .socials {
   display: flex;
   gap: 2rem;

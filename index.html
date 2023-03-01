@@ -36,7 +36,7 @@
                 <span></span>
             </div>
             <nav class="header__nav">
-                <a class="header__nav-link" href="#">ABOUT US</a>
+                <a class="header__nav-link" href="#"><span class="header__nav-link-text">ABOUT US</span></a>
                 <a class="header__nav-link" href="#projects">PROJECTS</a>
                 <a class="header__nav-link" href="#news">NEWS</a>
                 <a class="header__nav-link" href="#contacts">CONTACT</a>
@@ -308,9 +308,11 @@
 <script>
     const burgerMenu = document.querySelector('.burger-menu');
     const nav = document.querySelector('.header__nav');
+    const navLink = document.querySelector('.header__nav-link');
 
     burgerMenu.addEventListener('click', () => {
         nav.classList.toggle('show');
+        navLink.classList.toggle('show');
         burgerMenu.classList.toggle('active');
     });
 </script>
