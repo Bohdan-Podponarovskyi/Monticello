@@ -442,6 +442,7 @@ a {
   justify-content: space-between;
   align-items: center;
   min-height: 80px;
+  position: relative;
 }
 .header__nav {
   display: flex;
@@ -505,6 +506,46 @@ a {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 768px) {
+  .header__nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: linear-gradient(243.43deg, #55B7FF 16.9%, #7E5AFF 83.27%);
+    border-top: 1px solid #ffffff;
+    box-shadow: #4B5562;
+    z-index: 999;
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+  }
+  .header__nav-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+    padding: 20px 20px 20px;
+  }
+  .header__nav-link:before {
+    display: none;
+  }
+  .header__nav.show {
+    display: flex;
+    width: 50%;
+    gap: 0;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header__nav.show {
+    width: 100%;
+  }
+}
 .footer {
   background-image: url("./../img/footer-bg.png");
   background-repeat: no-repeat;
@@ -709,6 +750,36 @@ main .slick-dots li.slick-active button:before {
   transform: translate(-50%, -50%);
 }
 
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+.burger-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.active span:nth-child(1) {
+    transform-origin: center center;
+    transform: rotate(45deg) translate(6px, 5px);
+  }
+  .burger-menu.active span:nth-child(3) {
+    transform-origin: center center;
+    transform: rotate(-45deg) translate(6px, -5px);
+  }
+}
 .form {
   width: 100%;
   max-width: 77rem;
@@ -870,6 +941,12 @@ main .slick-dots li.slick-active button:before {
   width: 100vw;
   max-width: 100%;
   min-height: 43.75vw;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .news {
@@ -1054,6 +1131,12 @@ main .slick-dots li.slick-active button:before {
 .socials__icon-wrapper:hover .socials__icon {
   color: #7E5AFF;
   transition: all 300ms ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .socials {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

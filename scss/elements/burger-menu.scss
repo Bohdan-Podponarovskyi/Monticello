@@ -1,0 +1,36 @@
+.burger-menu {
+  display: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 5px;
+    background: $color-white-default;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: $tablet-start) {
+  .burger-menu {
+    display: block;
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(1) {
+      transform-origin: center center;
+      transform: rotate(45deg) translate(6px, 5px);
+    }
+
+    &.active span:nth-child(3) {
+      transform-origin: center center;
+      transform: rotate(-45deg) translate(6px, -5px);
+    }
+  }
+}
+
+

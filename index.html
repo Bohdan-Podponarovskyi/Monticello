@@ -29,12 +29,19 @@
                 </svg>
             </a>
         </div>
-        <nav class="header__nav">
-            <a class="header__nav-link" href="#">ABOUT US</a>
-            <a class="header__nav-link" href="#projects">PROJECTS</a>
-            <a class="header__nav-link" href="#news">NEWS</a>
-            <a class="header__nav-link" href="#contacts">CONTACT</a>
-        </nav>
+        <div class="nav-container">
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="header__nav">
+                <a class="header__nav-link" href="#">ABOUT US</a>
+                <a class="header__nav-link" href="#projects">PROJECTS</a>
+                <a class="header__nav-link" href="#news">NEWS</a>
+                <a class="header__nav-link" href="#contacts">CONTACT</a>
+            </nav>
+        </div>
         <div class="socials">
             <a href="https://www.facebook.com/" target="_blank" class="socials__icon-wrapper"><i class="socials__icon fa-brands fa-facebook-f"></i></a>
             <a href="https://twitter.com/" target="_blank" class="socials__icon-wrapper"><i class="socials__icon fa-brands fa-twitter"></i></a>
@@ -299,7 +306,13 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="./index.js"></script>
 <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const nav = document.querySelector('.header__nav');
 
+    burgerMenu.addEventListener('click', () => {
+        nav.classList.toggle('show');
+        burgerMenu.classList.toggle('active');
+    });
 </script>
 </body>
 </html>
