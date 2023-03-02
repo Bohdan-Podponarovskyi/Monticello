@@ -50,17 +50,44 @@ window.initMap = initMap;
 
 //
 
-$('.news__slider-wrapper--inner').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    prevArrow: $('.slick-button--prev'),
-    nextArrow: $('.slick-button--next'),
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-});
+// $('.news__slider-wrapper--inner').slick({
+//     dots: true,
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     prevArrow: $('.slick-button--prev'),
+//     nextArrow: $('.slick-button--next'),
+//     autoplay: true,
+//     autoplaySpeed: 3000,
+//     pauseOnHover: true,
+//     responsive: [
+//         {
+//             breakpoint: 1024,
+//             settings: {
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 infinite: true,
+//                 dots: true
+//             }
+//         },
+//         {
+//             breakpoint: 768,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1
+//             }
+//         },
+//         {
+//             breakpoint: 375,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1
+//             }
+//         }
+//     ]
+// });
+
+
 
 //
 

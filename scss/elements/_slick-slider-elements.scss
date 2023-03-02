@@ -110,6 +110,14 @@ main .slick-dots li.slick-active button:before {
     transform: translate(-50%, -50%);
     left: -6rem;
 
+    @media screen and (max-width: $desktop-small) {
+      left: -3rem;
+    }
+
+    //@media screen and (max-width: $tablet-start) {
+    //  left: -1rem;
+    //}
+
     &:hover {
       transform: translate(-50%, -50%) scale(1.1) ;
     }
@@ -119,6 +127,14 @@ main .slick-dots li.slick-active button:before {
     top:50%;
     right: -6rem;
     transform: translate(50%, -50%);
+
+    @media screen and (max-width: $desktop-small) {
+      right: -3rem;
+    }
+    //
+    //@media screen and (max-width: $tablet-start) {
+    //  right: -1rem;
+    //}
 
     &:hover {
       transform: translate(50%, -50%) scale(1.1);
@@ -143,3 +159,7 @@ main .slick-dots li.slick-active button:before {
     transform: translate(-50%, -50%);
   }
 }
+
+main .slick-track {display: flex !important}
+
+main .slick-slide {height: auto;}
