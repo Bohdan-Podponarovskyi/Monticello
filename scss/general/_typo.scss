@@ -1,3 +1,16 @@
+body {
+  font-family: $primary-text;
+  font-size: $default-font-size;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-black-default;
+
+  @media screen and (max-width: $tablet-start) {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+}
+
 .title {
   font-family: $primary-title;
   color: $color-blue;
