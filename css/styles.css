@@ -489,16 +489,15 @@ a {
 }
 @media screen and (max-width: 768px) {
   .header__banner-title {
-    max-width: 56%;
+    font-size: 5rem;
+    line-height: 5.5rem;
+    max-width: 35%;
     margin: 0 auto 2rem;
   }
 }
 @media screen and (max-width: 375px) {
   .header__banner-title {
-    font-size: 5rem;
-    line-height: 5.5rem;
     max-width: 80%;
-    margin: 0 auto 2rem;
   }
 }
 .header__banner-subtitle {

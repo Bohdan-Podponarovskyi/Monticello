@@ -8,7 +8,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  ////height: 100%;
 
   @media screen and (max-width: $tablet-start) {
     padding: 7rem 0;
@@ -32,12 +31,10 @@
       position: relative;
 
       @media screen and (max-width: $desktop-small) {
-        //width: 700px;
       }
     }
 
     &--inner {
-      //width: 100%;
       max-width: $max-content-width;
       box-sizing: border-box;
 

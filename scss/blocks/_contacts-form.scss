@@ -53,7 +53,6 @@
 
     @media screen and (max-width: $mobile) {
       flex-direction: column;
-      //right: 0;
     }
   }
 
@@ -66,7 +65,6 @@
     flex-direction: column;
 
     &-label {
-      //display: inline;
       box-sizing: border-box;
       width: 100%;
       max-width: 31rem;

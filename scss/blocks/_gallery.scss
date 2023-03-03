@@ -43,7 +43,6 @@
 
   &__image {
     width: 100%;
-    //max-width: 36.25vw;
     height: 100%;
     box-sizing: border-box;
   }
@@ -72,23 +71,14 @@
     }
   }
 
-  &__image-5 {
-
-    //@media screen and (max-width: $desktop-small) {
-    //  display: none;
-    //}
-  }
-
   &__hover-button {
     color: $color-white-default;
     position: absolute;
     top: 50%;
     left: 50%;
     display: none;
-
     transform: translate(-50%, -50%);
     font-size: 150px;
-
   }
 
   &__magnifying-glass-icon {

@@ -59,15 +59,14 @@
       text-align: center;
 
       @media screen and (max-width: $tablet-start) {
-        max-width: 56%;
+        font-size: 5rem;
+        line-height: 5.5rem;
+        max-width: 35%;
         margin: 0 auto 2rem;
       }
 
       @media screen and (max-width: $mobile) {
-        font-size: 5rem;
-        line-height: 5.5rem;
         max-width: 80%;
-        margin: 0 auto 2rem;
       }
     }
 
