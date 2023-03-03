@@ -9,6 +9,11 @@
   position: relative;
   padding-top: 200px;
 
+  @media screen and (max-width: $tablet-start) {
+    height: 100%;
+    padding: 5rem 3rem;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -26,5 +31,9 @@
     justify-content: space-between;
     align-items: start;
     flex-wrap: wrap;
+
+    @media screen and (max-width: $mobile) {
+      align-items: center;
+    }
   }
 }

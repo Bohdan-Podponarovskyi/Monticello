@@ -27,6 +27,11 @@
       justify-content: center;
       align-items: center;
     }
+
+    @media screen and (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__photo-box {

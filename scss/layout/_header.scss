@@ -9,6 +9,14 @@
   height: 100vh;
   position: relative;
 
+  @media screen and (max-width: $tablet-start) {
+    padding: 7rem 3rem;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: 5rem 3rem;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -19,12 +27,27 @@
     left: 0;
     background: linear-gradient(243.43deg, $color-violet 16.9%, $color-blue-light 83.27%);
   }
+  &__slider-wrapper {
+    text-align: center;
+  }
 
   &__banner {
 
     &-text {
       text-align: center;
       margin-top: 30vh;
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: center;
+      //align-items: center;
+
+      @media screen and (max-width: $tablet-start) {
+        margin-top: 20vh;
+      }
+
+      @media screen and (max-width: $mobile) {
+        margin-top: 27vh;
+      }
     }
 
     &-title {
@@ -33,6 +56,19 @@
       letter-spacing: 0.1rem;
       color: $color-white-default;
       margin-bottom: 2rem;
+      text-align: center;
+
+      @media screen and (max-width: $tablet-start) {
+        max-width: 56%;
+        margin: 0 auto 2rem;
+      }
+
+      @media screen and (max-width: $mobile) {
+        font-size: 5rem;
+        line-height: 5.5rem;
+        max-width: 80%;
+        margin: 0 auto 2rem;
+      }
     }
 
     &-subtitle {
@@ -50,6 +86,10 @@
     align-items: center;
     min-height: 80px;
     position: relative;
+
+    @media screen and (max-width: $tablet-start) {
+      padding: 0;
+    }
   }
 
   &__nav {

@@ -5,7 +5,7 @@ header .slick-dots {
   position: absolute;
   left: 100%;
   top: 50%;
-  width: 1px;
+  width: auto;
 }
 
 header .slick-dots li {
@@ -15,8 +15,8 @@ header .slick-dots li {
 
 header .slick-dots li button {
   display: block;
-  width: 40px;
-  height: 40px;
+  //width: 40px;
+  //height: 40px;
   cursor: pointer;
   color: transparent;
   border: 0;
@@ -52,17 +52,24 @@ main .slick-dots {
   //left: 100%;
   //top: 50%;
   //width: 1px;
+  text-align: center;
+
+  @media screen and (max-width: $mobile) {
+    gap: 1rem;
+  }
 }
 
 main .slick-dots li {
   cursor: pointer;
   margin-top: 4rem;
+  text-align: center;
+
 }
 
 main .slick-dots li button {
   display: block;
-  width: 40px;
-  height: 40px;
+  //width: 40px;
+  //height: 40px;
   cursor: pointer;
   color: transparent;
   border: 0;
@@ -85,81 +92,90 @@ main .slick-dots li.slick-active button:before {
   background-color: white;
 }
 
+main .slick-track {
+  display: flex;
+}
+
 
 
 //slick arrows
-.slick-button {
-  //display: block;
-  //width: 100%;
-  min-width: 4.5rem;
-  //height: 100%;
-  min-height: 4.5rem;
-  border: 1px solid $color-white-default;
-  border-radius: 50%;
-  position: absolute;
-  //top: 90%;
-  //left: 50%;
-  //transform: translate(-50%, -50%);
-  cursor: pointer;
-  opacity: 0.7;
-  transition: all 300ms ease-out;
-  transform-origin: center center;
 
-  &--prev {
-    top:50%;
-    transform: translate(-50%, -50%);
-    left: -6rem;
+.slick {
 
-    @media screen and (max-width: $desktop-small) {
-      left: -3rem;
-    }
-
-    //@media screen and (max-width: $tablet-start) {
-    //  left: -1rem;
-    //}
-
-    &:hover {
-      transform: translate(-50%, -50%) scale(1.1) ;
-    }
-  }
-
-  &--next {
-    top:50%;
-    right: -6rem;
-    transform: translate(50%, -50%);
-
-    @media screen and (max-width: $desktop-small) {
-      right: -3rem;
-    }
-    //
-    //@media screen and (max-width: $tablet-start) {
-    //  right: -1rem;
-    //}
-
-    &:hover {
-      transform: translate(50%, -50%) scale(1.1);
-    }
-  }
-
-  &:hover {
-    background-color: white;
-    opacity: 1;
-    transition: all 300ms ease-out;
-  }
-
-  &:hover &__icon {
-    color: $color-violet;
-  }
-
-  &__icon {
-    color: $color-white-default;
+  &-button {
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    border: 1px solid $color-white-default;
+    border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 300ms ease-out;
+    transform-origin: center center;
+
+    //@media screen and (max-width: $mobile) {
+    //  display: none;
+    //}
+
+    &--prev {
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: -6rem;
+
+      @media screen and (max-width: $desktop-small) {
+        left: -3rem;
+      }
+
+      @media screen and (max-width: $mobile) {
+        top: 97%;
+        transform: translate(50%, -50%);
+      }
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+
+    &--next {
+      top: 50%;
+      right: -6rem;
+      transform: translate(50%, -50%);
+
+      @media screen and (max-width: $desktop-small) {
+        right: -3rem;
+      }
+
+      @media screen and (max-width: $mobile) {
+        top: 97%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        transform: translate(50%, -50%) scale(1.1);
+      }
+    }
+
+    &:hover {
+      background-color: white;
+      opacity: 1;
+      transition: all 300ms ease-out;
+    }
+
+    &:hover &__icon {
+      color: $color-violet;
+    }
+
+    &__icon {
+      color: $color-white-default;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
-
-main .slick-track {display: flex !important}
-
-main .slick-slide {height: auto;}
+//main .slick-track {
+//  display: flex;
+//}
+//
+//main .slick-slide {height: auto;}

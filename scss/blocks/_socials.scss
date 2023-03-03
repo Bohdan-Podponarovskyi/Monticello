@@ -2,9 +2,24 @@
   display: flex;
   gap: 2rem;
 
+  &__header {
+
+    @media screen and (max-width: $tablet-start) {
+        display: none;
+    }
+  }
+
   &__footer {
     flex-basis: 50%;
     justify-content: end;
+
+    @media screen and (max-width: $tablet-start) {
+      align-self: flex-end;
+    }
+
+    @media screen and (max-width: $mobile) {
+      margin-top: 4rem;
+    }
   }
 
   &__icon {
@@ -38,8 +53,8 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .socials {
-    display: none;
-  }
-}
+//@media screen and (max-width: 768px) {
+//  .socials {
+//    display: none;
+//  }
+//}

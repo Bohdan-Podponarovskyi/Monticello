@@ -50,7 +50,11 @@
 
   &__title {
     margin-bottom: 9rem;
-    color: $color-white-default
+    color: $color-white-default;
+
+    @media screen and (max-width: $tablet-start) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__divider {
