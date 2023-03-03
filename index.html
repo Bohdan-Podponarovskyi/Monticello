@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-
-
 <header class="header" id="header">
     <section class="header__menu content-wrapper">
         <div class="logo">
@@ -296,65 +294,15 @@
             <a href="https://www.google.com.ua/" target="_blank" class="socials__icon-wrapper"><i class="socials__icon fa-brands fa-instagram"></i></a>
         </div>
     </div>
-    <div class="button__scroll-to-top" onclick="scrollToTop()">
+    <div class="button__scroll-to-top">
         <i class="button__scroll-to-top-icon fa-solid fa-arrow-up"></i>
     </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://kit.fontawesome.com/90df8eb40e.js" crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?place_id=766b53887ab54fb2&key=AIzaSyAF4dqZT7URhtZ_N2_zS5CPp883wwLLqME&callback=initMap" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-<script src="./index.js"></script>
-<script>
-    const burgerMenu = document.querySelector('.burger-menu');
-    const nav = document.querySelector('.header__nav');
-
-    burgerMenu.addEventListener('click', () => {
-        nav.classList.toggle('show');
-        burgerMenu.classList.toggle('active');
-    });
-
-    $('.news__slider-wrapper--inner').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        prevArrow: $('.slick-button--prev'),
-        nextArrow: $('.slick-button--next'),
-        mobileFirst: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 1439,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 1023,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 319,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-    });
-</script>
+<script src="./scripts.js"></script>
 </body>
 </html>
