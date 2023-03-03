@@ -131,4 +131,8 @@ myApp.initScrollToTopButton()
 myApp.initBurgerMenu()
 myApp.initNewsSlider()
 
+const autoprefixer = require('autoprefixer');
 
+const browserslist = require('./package.json').browserslist;
+
+autoprefixer({ browsers: browserslist });
