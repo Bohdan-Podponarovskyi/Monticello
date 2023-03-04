@@ -840,7 +840,7 @@ main .slick-track {
 @media screen and (max-width: 425px) {
   .slick-button--prev {
     top: 97%;
-    transform: translate(50%, -50%);
+    left: 1rem;
   }
 }
 .slick-button--prev:hover {
@@ -859,7 +859,7 @@ main .slick-track {
 @media screen and (max-width: 425px) {
   .slick-button--next {
     top: 97%;
-    transform: translate(-50%, -50%);
+    right: 1rem;
   }
 }
 .slick-button--next:hover {

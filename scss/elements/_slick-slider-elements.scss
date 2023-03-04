@@ -112,7 +112,7 @@ main .slick-track {
 
       @media screen and (max-width: $mobile) {
         top: 97%;
-        transform: translate(50%, -50%);
+        left: 1rem;
       }
 
       &:hover {
@@ -131,7 +131,7 @@ main .slick-track {
 
       @media screen and (max-width: $mobile) {
         top: 97%;
-        transform: translate(-50%, -50%);
+        right: 1rem;
       }
 
       &:hover {
