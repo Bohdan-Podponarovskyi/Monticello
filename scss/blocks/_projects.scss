@@ -3,12 +3,10 @@
 
   @media screen and (max-width: $tablet-start) {
     padding-top: 7rem;
-    height: 100vh;
   }
 
   @media screen and (max-width: $mobile) {
     padding-top: 5rem;
-    height: 100%;
   }
 
   &__title {
